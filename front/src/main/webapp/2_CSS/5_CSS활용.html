@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<style type="text/css">
+	/*선택자 여러선택시
+	
+	*/
+	body{
+	background-image: url("배경화면.png")
+	}
+	div,span{
+	border: solid 3px black;
+	width: 500px;  /*가로사이즈 -> 기본값 100%  */
+	height: 500px;
+	
+	}
+	#t1{background-color: aliceblue;}
+	
+	#t2{background-color: Azure;}
+	#t3{background-color: skyblue;}
+	table,th,td{
+	border: solid 2px black;
+	}
+	table{
+	border-collapse: collapse; /*테두리 없애줌*/
+	margin:50px;
+	}
+	th{
+	padding: 10px;
+	background-color:#eeeeee;
+	}
+	td{
+	padding: 10px;
+	text-align: cetner;
+	color: black;
+	}
+	.col1{width: 50px;}
+	.col2,.col3{width:100px;}
+	
+	</style>
+</head>
+<body>
+
+	<h3> 배경 이미지 </h3>
+		<div id = "t1"> <!--  한줄차지 박스모델  -->
+		안녕하세요
+		</div>
+		
+		<h3>테이블</h3>
+		<div id = "t2">안녕하세요2
+		<table>
+			<tr>
+				<th class="col1">종류</th>
+				<th class="col2">대인</th>
+				<th class="col3">소인</th>
+				<th class="col4">비고</th>
+			
+			
+			</tr>
+			
+			<tr>
+				<td>주간권</td>
+				<td>20,000원</td>
+				<td>10,000원</td>
+				<td rowspan="3"></td>
+				
+			</tr>
+				<tr>
+				<td>야간권</td>
+				<td>10,000원</td>
+				<td>5,000원</td>
+			</tr>
+				<tr>
+				<td>2일권</td>	<td>50,000원</td>
+				<td>70,000원</td>
+			</tr>
+			
+		</table>
+		
+		</div>
+		
+		<span id = "t2">안녕하세요3</span>
+		
+	
+</body>	
+</html>
