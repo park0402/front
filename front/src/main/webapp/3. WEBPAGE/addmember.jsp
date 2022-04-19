@@ -1,18 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-
 	<style type="text/css">
+	#contents{margin : 100px 0px;}
 	
-		h3{ text-align: center;}
+			h3{ text-align: center;}
 		li{ list-style-type: none; }/* 글머리 제거 */
 		#join{
 			width: 600px;
 			margin: 0 auto; /* 가운데 정렬 */
-			border-top: solid 2px red;
-			border-bottom: solid 2px red;
+			border-top: solid 2px #2945BA;
+			border-bottom: solid 2px #2945BA;
 			padding: 30px;
 		}
 		.cols{ padding: 5px; }
@@ -25,29 +27,27 @@
 			width: 600px;
 			margin: 0 auto;
 			text-align: right;
+			
+			color: white;
 		}
 		#button input{
 			padding: 10px 20px; 
 			margin-top: 20px;
+			background-color: #2945BA;
+			color: white;
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	
 	</style>
-	
 </head>
 <body>
-	<h3> 회원 가입 폼 </h3>
+	<%@include file="header.jsp"%>
+	
+	<%@include file="mainimage.jsp"%>
+
+	<div id = "contents">
+	
+
+	<h3> ERIYA 회원 가입 </h3>
 	<form> <!-- 폼 양식 -->
 		<ul id="join"> <!-- 전체 -->
 			<li> <!-- 행 [ tr ] -->	
@@ -120,8 +120,9 @@
 			<input type="reset" value="취소하기">
 		</div>
 	</form>
+	</div>
+	
+		<%@include file="footer.jsp"%>
+
 </body>
 </html>
-
-
-
