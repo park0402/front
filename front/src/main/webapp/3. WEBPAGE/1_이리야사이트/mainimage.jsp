@@ -22,6 +22,6 @@
 
 </head>
 <body>
-	<div id="main_img" > </div>
+<a href="index.jsp"><div id="main_img" > </a></div>
 </body>
 </html>

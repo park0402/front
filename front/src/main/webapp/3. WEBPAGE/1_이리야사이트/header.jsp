@@ -34,7 +34,7 @@
 	
 	<div id="header">
 		<div id="logo"><!-- 로고 -->
-			<a href="index.jsp"></a><img alt="" src="img/이랴.png" width="50%">
+			<a href="index.jsp"><img alt="" src="img/이랴.png" width="50%"></a>
 		</div> 
 		<div id="menus">	<!-- 메뉴 -->
 			<div id="top_menu"> <!-- 상단 메뉴  -->
