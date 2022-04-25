@@ -43,9 +43,9 @@
 			}	
 			#footerlogo{
 				float: left;
-				margin: 10px 0 0 100px;
+				margin: 10px 0 0 10px;
 			}
-			#png]{
+			#png{
 				float: left;
 			}
 			#num{

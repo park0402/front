@@ -9,7 +9,7 @@
 	<style type="text/css">
 	
 	li{list-style-type: none;}
-	#main{
+	#main_box{
 		width : 1100px;
 		height : 300px;
 		margin: 0 auto;
@@ -73,9 +73,7 @@
 		font-size: 10px;
 		font-family: "Yeongdo-Rg";
 	}
-	#main_mid {float: left;
-		
-		margin: 100px 10px 30px 400px;}
+
 	
 	</style>
 </head>
