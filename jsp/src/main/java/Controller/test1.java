@@ -1,6 +1,8 @@
 package Controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,10 +28,18 @@ public class test1 extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String 통신 = request.getParameter("id");
-		System.out.println("html에서 요청: " +통신);
-		System.out.println( "get 통신: " + request.getParameter("id"));
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String Id= request.getParameter("userID");
+		String Password= request.getParameter("userPassword");
+		
+		
+		//응답 처리 서버 ==> 브라우저에게 한글 전송시
+		response.setContentType("text/html; charset=utf-8");
+		
+		
+		PrintWriter out = response.getWriter();
+		out.print("<html><body>");
+		out.print("아이디는 : " + Id + " , 비밀번호는 : " + Password);
+		out.print("</body><html>");
 	}
 
 	/**
@@ -37,7 +47,7 @@ public class test1 extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println( "post 통신: " + request.getParameter("id"));
+		request.setCharacterEncoding("utf-8");
 		doGet(request, response);
 	}
 
