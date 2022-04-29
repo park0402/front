@@ -12,7 +12,7 @@
 
 	<% // 자바언어 작성되는 공간
 			// 폼이 전송하기전에는 요청 할수가 없다. [ null ]
-		0
+		
 		// 1. 현재 달력 가져오기 
 		Calendar calendar = Calendar.getInstance(); 
 		int year = calendar.get( Calendar.YEAR); 		// 1-2. 현재 연도

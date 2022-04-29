@@ -5,14 +5,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1> 로그인 폼</h1>
-
-	<form action="test1" method="post">
-	아이디 : <input type="text" name="userID"> <br/>
-	비밀번호 : <input type="password" name="userPassword"> <br/>
-
-	<input type="submit" value="로그인">
+	
+	<!-- 서블릿 통신  -->
+	<form action="../test" method="get">  
+		<input type="text" name="id">
+		<input type="submit" value="전송1" >
 	</form>
-
+	
+	<!-- jsp 통신  -->
+	<form action="test1.jsp" method="get">
+		<input type="text" name="id">
+		<input type="submit" value="전송2">
+	</form>
+	
 </body>
 </html>
