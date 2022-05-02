@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 	<!-- 사용자정의 css -->
 	<link href="/jspweb1/member/css/main.css " rel="stylesheet">
+	<!-- 부트스트랩 css -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	
 
@@ -24,8 +25,11 @@
 	</div>
 	<!-- 상대경로는 현문서 기준으로  -->
 	<!-- 헤더나 푸터는 절대경로잡기  -->
+	<!-- 부트스트랩 -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	
+	<!-- jquery -->
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 </body>
 </html>
