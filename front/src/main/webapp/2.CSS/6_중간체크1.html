@@ -1,78 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-
-	<style type="text/css">
-		
-		h3{
-			border-left: solid 10px green; 	/* ¿ŞÂÊ Å×µÎ¸® */
-			padding-left: 20px;				/* ¿ŞÂÊ ¾ÈÂÊ¿©¹é */
-		}
-		ul{
-			background-color: #eeeeee;		/* ¹è°æ»ö */
-			padding: 30px;					/* ¾ÈÂÊ ¿©¹é */
-			border: solid 2px #cccccc;		/* Å×µÎ¸® */
-			border-radius: 10px;			/* µÕ±Ù ¸ğ¼­¸®*/
-			width: 500px;			
-		}
-		li{
-			margin: 10px 20px;		/* ¹Ù±ù¿©¹é */
-			line-height: 150%;		/* ÁÙ°£°İ */
-		}
-		div{
-			border: solid 2px #cccccc; 	/* ¹è°æ»ö */
-			width: 300px;				/*°¡·Î »çÀÌÁî */
-			margin: 30px; 				/* ¹Ù±ù¿©¹é */
-			padding: 20px;  			/* ¾ÈÂÊ¿©¹é */
-			border-radius: 20px;		/* µÕ±Ù ¸ğ¼­¸® */
-		}
-		#content{
-			line-height: 180%;					/* ÁÙ°£°İ */ 
-			border-bottom: 1px dotted #cccccc; 	/* ¾Æ·¡ Å×µÎ¸® */
-			padding: 10px 0px;					/* ¾ÈÂÊ ¿©¹é */ 
-		}
-		#link{
-			text-align: right; /* ÅØ½ºÆ® Á¤·Ä */
-			margin-top: 10px;  /* À§ ¹Ù±ù¿©¹é */ 
-		}
-		a{ text-decoration: none;  color: black; } /* ¹ØÁÙÁ¦°Å , »ö»ó */
-		a:hover {text-shadow: 1px 1px 1px orange;} /* ¸¶¿ì½º ¿Ã·ÈÀ»¶§ ÅØ½ºÆ® ±×¸²ÀÚ */
-		
-		
-	</style>
-	
-
-
-</head>
-<body>
-
-	<!-- Áß°£°úÁ¦1 ÀÔ´Ï´Ù.  -->
-	<h3> ¿ì´ë Á¤º¸ </h3>
-	<ul> <!-- unorder list : ±Û¸Ó¸® ¸ñ·Ï -->
-		<li> ¿¬·É¿¡ µû¸¥ ¿ì´ë (³ªÀÌ È®ÀÎÀÌ °¡´ÉÇÑ ½ÅºĞµé ¶Ç´Â ¼­·ù Á¦½Ã) <br>
-		- °æ·Î : ¸¸ 65¼¼ ~ <br>
-		- Ã»¼Ò³â : ¸¸ 13¼¼ ~ ¸¸ 18¼¼
-		</li>
-		<li> Àå¾ÖÀÎ ¿ì´ë (Àå¾ÖÀÎµî·ÏÁõ Á¦½Ã) ¿ì´ë°¡°İ <br>
-		- 1ÀÏ ÀÌ¿ë±Ç ¿ì´ë°¡·Î ±¸ÀÔ °¡´É <br>
-		- Àå¾ÖÀÇ Á¤µµ°¡ ½ÉÇÑ Àå¾ÖÀÎ : º»ÀÎ+µ¿¾È 1ÀÎ 
-		</li>
-		<li> ±¹°¡À¯°øÀÚ ¿ì´ë (Áõ¸í¼­·ù Á¦½Ã)ÆÄÅ©ÀÌ¿ë±Ç °¡°İº¸±â<br>
-		- º»ÀÎ + µ¿¾È 1ÀÎ, 1ÀÏ ÀÌ¿ë±Ç 50% ¿ì´ë°¡ ±¸ÀÔ °¡´É 
-		</li>
-	</ul>
-	<div> <!-- ¹Ú½º Æ² -->
-		<h3> HTML/CSS °­ÁÂ </h3>
-		<p id="content"> HTML/CSSÀ» ÀÌ¿ëÇÏ¸é ÅØ½ºÆ®, ÀÌ¹ÌÁö, ºñµğ¿À, ¿Àµğ¿À µîÀ¸·Î
-		È¨ÆäÀÌÁö¸¦ Á¦ÀÛÇÒ¼ö ÀÖ¾î¿ä.^^
-		<p id="link"> <a href="#"> ¹Ù·Î°¡±â>> </a> </p>
-	</div>
-	
-</body>
-</html>
-
-
-
-
+<div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="name">ì´ë¦„</label>
+              <input type="text" class="form-control" id="name" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="nickname">ë³„ëª…</label>
+              <input type="text" class="form-control" id="nickname" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                ë³„ëª…ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.
+              </div>
+            </div>
+          </div>

@@ -1,5 +1,6 @@
+<%@page import="Dto.Member"%>
 <%@page import="Dao.MemberDao"%>
-<%@page import="dto.Member"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
