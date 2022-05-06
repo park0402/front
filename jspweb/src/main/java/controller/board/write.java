@@ -46,32 +46,28 @@ public class write extends HttpServlet {
 				// 서버 경로 찾기 : request.getSession().getServletContext().getRealPath( 경로 ) ;
 		String uploadpath = request.getSession().getServletContext().getRealPath("/board/upload") ;
 
-		// 첨부파일 업로드 [ MultipartRequest : cos 라이브러리 제공 클래스 ] 
+		// 첨부파일 업로드 [MultipartRequest : cos 라이브러리 제공 클래스]
 		MultipartRequest multi = new MultipartRequest(
-				request ,		// 1. 요청방식 
-				uploadpath , 	// 2. 파일 저장 경로 
-				1024*1024*10 ,	// 3. 파일 최대 용량 허용 범위 [ 10MB ] 
-				"UTF-8" ,		// 4. 인코딩타입 
-				new DefaultFileRenamePolicy() 	// 4. 보안방식 : 동일한 파일명이 있을경우 자동 이름 변환 
-				);	
-		// 데이터 요청 
+				request, // 1. 요청방식
+				uploadpath, // 2. 파일 저장 경로
+				1024*1024*10, // 3. 파일 최대 용량 허용 범위 [10mb]
+				"UTF-8", // 4. 인코딩타입
+				new DefaultFileRenamePolicy() // 5. 보안방식 : 동일한 파일명이 있을경우 자동 이름 변환
+				); // 동일한 파일명이 있을경우 자동 이름 변환
+		HttpSession session = request.getSession();
 		String btitle = multi.getParameter("btitle");
 		String bcontent = multi.getParameter("bcontent");
 		String bfile = multi.getFilesystemName("bfile"); // 첨부파일 : getFilesystemName
-		
-			HttpSession session = request.getSession();
-			String mid = (String)session.getAttribute("login");
-			
+		String mid = (String)session.getAttribute("loginid");
 		int mno = MemberDao.getmemberDao().getmno(mid);
-		// 객체화 
-		Board board = new Board( 0 , btitle, bcontent, mno, bfile, 0 , null, mid);
-		
-		// DB 처리
+		Board board = new Board(0, btitle, bcontent, mno, 0, null, bfile, mid);
 		boolean result = BoardDao.getBoardDao().write(board);
-		// 결과 
-		if( result ) { response.sendRedirect("/jspweb/board/boardlist.jsp"); }
-		else { response.sendRedirect("/jspweb/board/boardwrite.jsp"); }
-		
+		if(result) {
+			response.sendRedirect("/jspwebcws/board/boardlist.jsp");
+		}
+		else {
+			response.sendRedirect("/jspwebcws/board/boardwrite.jsp");
+		}
 	}
 
 }

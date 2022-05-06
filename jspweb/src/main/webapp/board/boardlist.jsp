@@ -9,7 +9,7 @@
 </head>
 <body>
 	
-
+	<%@include file ="../header.jsp" %>
 
 	<div class="container">
 		<h3> 자유게시판 </h3>
