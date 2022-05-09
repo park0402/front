@@ -63,6 +63,7 @@ public class BoardDao extends Dao {
 	
 	
 
+
 	// 3. 개별 게시물 출력 메소드 [ 인수 : 게시물번호 ]
 	public Board getboard(int bno) { 
 		String sql = "select *from board where bno="+bno;
@@ -85,7 +86,7 @@ public class BoardDao extends Dao {
 		
 		
 		
-		return null; }
+		}
 	// 4. 게시물 수정 메소드 	[ 인수 : 수정할 게시물번호  / 수정된 내용 ]
 	public boolean update( Board board ) { return false; }
 	// 5. 게시물 삭제 메소드 	[ 인수 : 삭제할 게시물번호 

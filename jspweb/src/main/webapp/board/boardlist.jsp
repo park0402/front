@@ -46,7 +46,7 @@
 				<tr>
 					<td> <a href="#"><%=board.getBno() %> </td>
 					<td> <a href="boardview.jsp?bno=<%=board.getBno()%>">
-							<%=board.getBtitle() %><a></a> </td>
+							<%=board.getBtitle() %></a> </td>
 					<td> <a href="#"><%=board.getMid() %> </td>
 					<td> <a href="#"><%=board.getBview() %> </td>
 					<td> <a href="#"><%=board.getBdate() %> </td>
