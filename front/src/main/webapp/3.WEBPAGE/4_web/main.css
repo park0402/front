@@ -1,19 +1,20 @@
 
+div{border: solid 1px red; }
 
-/* ±âº»°ª ¿©¹é Á¦°Å */
+/* ï¿½âº»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 *{padding: 0px;margin: 0px;}
-/* ¸µÅ© ±âº»°ª Á¦°Å */
+/* ï¿½ï¿½Å© ï¿½âº»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 a{ text-decoration: none; color: black;}
 a:hover { color: orange; }
 
-@font-face { /* À¥ÆùÆ®*/
-    font-family: 'SANGJUGyeongcheonIsland';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/SANGJUGyeongcheonIsland.woff') format('woff');
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-*{ font-family: 'SANGJUGyeongcheonIsland'; }
+*{ font-family: 'SBAggroB'; }
 
 .header_logo{
 	font-size: 30px;
@@ -42,7 +43,7 @@ a:hover { color: orange; }
 	margin: 0 auto;
 }
 .form-control{
-	background-color: white !important; /* Áßº¹ÀÏ°æ¿ì !important : ¿ì¼± Àû¿ë*/
+	background-color: white !important; /* ï¿½ßºï¿½ï¿½Ï°ï¿½ï¿½ !important : ï¿½ì¼± ï¿½ï¿½ï¿½ï¿½*/
 }
 
 

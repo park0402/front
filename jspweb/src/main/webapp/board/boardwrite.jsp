@@ -15,7 +15,7 @@
 <body>
 
 	<%@include file ="../header.jsp" %>
-	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<div class="container">
 		<a href="boardlist.jsp"><button>글목록</button></a>
 		<h3> 글쓰기 </h3>
