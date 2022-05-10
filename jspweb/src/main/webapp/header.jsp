@@ -29,7 +29,7 @@
 					<div class="col-md-4 offset-4 text-center"> <!-- 그리드[12조각중 4조각] -->
 							<!-- text-center : 박스권내 내용물 가운데 정렬 -->
 							<!-- offset-4 : 여백 그리드 -->
-						<a href="main.jsp" class="header_logo"> PARK'Cars </a> <!-- 링크 -->
+						<a href="/jspweb/main.jsp" class="header_logo"> PARK'Cars </a> <!-- 링크 -->
 					</div>
 							<!--  로그인이 안된 상태 = 만약에 세션이 없으면  -->
 					<% if( loginid == null ){ %>

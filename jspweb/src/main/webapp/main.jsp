@@ -6,7 +6,8 @@
 </head>
 <body>
 	
-	<!-- 현재 위치(파일)에 다른 파일 포함하기 -->
+	<!-- 현재 위치(파일)에 다른 파
+	일 포함하기 -->
 	<%@include file = "header.jsp" %>
 	<br><br><br><br><br><br>
 	<!--  캐러셀 : 이미지 슬라이드  -->
@@ -21,10 +22,10 @@
 		</div>
 		 <!-- 캐러셀 내용물 -->
 		<div class="carousel-inner">
-			<div class="carousel-item active"> <img alt="" src="img/mainimage1.jpg"> </div>
-			<div class="carousel-item "> <img alt="" src="img/mainimage2.jpg"> </div>
-			<div class="carousel-item "> <img alt="" src="img/mainimage3.jpg"> </div>
-			<div class="carousel-item "> <img alt="" src="img/mainimage4.jpg"> </div>
+			<div class="carousel-item active"> <img alt="" src="img/차량1.jpg"> </div>
+			<div class="carousel-item "> <img alt="" src="img/차량2.png"> </div>
+			<div class="carousel-item "> <img alt="" src="img/황금마티즈.png"> </div>
+			<div class="carousel-item "> <img alt="" src="img/연습카트.png"> </div>
 		</div>
 		<!-- 이미지 이동 버튼 -->
 		<button class="carousel-control-prev" data-bs-target="#cs" data-bs-slide="prev">

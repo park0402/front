@@ -15,17 +15,21 @@
 	
 </head>
 <body>
-	<br><br><br><br><br><br><br><br><br><br><br>
+
 	<%@include file ="../header.jsp" %>
-	
+		<%
+		int bno = Integer.parseInt(request.getParameter("bno"));
+		Board board = BoardDao.getBoardDao().getboard(bno);
+	%>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<div class="container">
 		<a href="boardlist.jsp"><button>글목록</button></a>
 		<h3> 글쓰기 </h3>
-		<form action="../board/write" method="post" enctype="multipart/form-data" >
+		<form action="../board/bupdate?bno=<%=board.getBno() %>" method="post" enctype="multipart/form-data" >
 			<!-- form 전송 인코딩 타입 : 기본타입은 첨부파일 불가능  -->
 			<!-- form 첨부파일 전송 인코딩 타입 : enctype="multipart/form-data" -->
-			제목 : <input type="text" name="btitle"> <br>
-			<textarea name="bcontent" id="summernote"></textarea>
+			제목 : <input type="text" name="btitle" value="<%=board.getBtitle()%>"> <br>
+			<textarea name="bcontent" id="summernote" value="<%=board.getBcontent()%>"></textarea>
 			첨부파일 : <input type="file" name="bfile"> <br>
 			<input type="submit" value="등록"><input type="reset" value="취소">
 		</form>
