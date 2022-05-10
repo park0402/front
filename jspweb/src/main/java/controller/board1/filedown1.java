@@ -1,4 +1,4 @@
-package controller.board;
+package controller.board1;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -17,15 +17,15 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class filedown1
  */
-@WebServlet("/board/filedown")
-public class filedown extends HttpServlet {
+@WebServlet("/board1/filedown1")
+public class filedown1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
     /**
      * @see HttpServlet#HttpServlet()
      */      
  
-    public filedown() {
+    public filedown1() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,10 +34,10 @@ public class filedown extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		String bfile=request.getParameter("bfile");
+		String bfile1=request.getParameter("bfile1");
 		//System.out.println("다운로드 파일명 " + bfile); 확인코드
 		//2.서버에서 해당 파일 찾기
-		String uploadpath = request.getSession().getServletContext().getRealPath("/board/upload"+bfile);
+		String uploadpath = request.getSession().getServletContext().getRealPath("/board1/upload1"+bfile1);
 		//프로젝트 경로찾기
 		//String uploadpath= "C:\Users\Stephen\git\front\jspweb\src\main\webapp\board" +bfile
 		
@@ -45,7 +45,7 @@ public class filedown extends HttpServlet {
 		File file = new File(uploadpath);
 		//4. 다운로드 형식
 		response.setHeader("Content-Disposition",
-							"attachment;filename="+URLEncoder.encode(bfile,"utf-8"));
+							"attachment;filename="+URLEncoder.encode(bfile1,"utf-8"));
 							//다운로드 형식                // 다운로드 화면에서 표시할 파일명 
 							//attachment;filename = : 다운로드 화면에서 표시할 파일
 							// *만일 첨부 파일이면 

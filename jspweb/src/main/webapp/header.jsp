@@ -80,7 +80,7 @@
 						<li class="nav-item"> <a href="#" class="nav-link">혼다</a> </li>
 						<li class="nav-item"> <a href="#" class="nav-link">그외</a> </li>
 						<li class="nav-item"> <a href="/jspweb/board/boardlist.jsp" class="nav-link">커뮤니티</a> </li>	
-						<li class="nav-item"> <a href="/jspweb/board/boardlist.jsp" class="nav-link">고객센터</a> </li>	
+						<li class="nav-item"> <a href="/jspweb/board1/boardlist1.jsp" class="nav-link">고객센터</a> </li>	
 						<li class="nav-item"> <a href="#" class="nav-link"> <i class="fas fa-search"></i> </a> </li>	
 					</ul>
 	

@@ -79,7 +79,7 @@ public class BoardDao extends Dao {
 	}
 	
 	// 5. 게시물 삭제 메소드 	[ 인수 : 삭제할 게시물번호 
-	public boolean delete( int bno ) { 
+	public boolean bdelete( int bno ) { 
 		String sql = "delete from board where bno="+bno;
 		try { ps = con.prepareStatement(sql); ps.executeUpdate(); return true;}
 		catch (Exception e) {} return false;
@@ -144,10 +144,82 @@ public class BoardDao extends Dao {
 		}catch (Exception e) { System.out.println(e); } return null;
 		
 	}
-	// 9. 댓글 수정 메소드 		[ 인수 : 수정할 댓글 번호 ]
-	public boolean replyupdate() { return false; }
-	// 10. 댓글 삭제 메소드 		[ 인수 : 삭제할 댓글 번호 ] 
-	public boolean replydelete() { return false; }
+	// 9. 댓글 수정 메소드 [인수 : 수정할 댓글 번호]
+	public boolean replyupdate(int rno, int bno, String content) {
+		try {
+			String sql = "update reply set rcontent = ? where rno = ? and bno = ?";
+			ps = con.prepareStatement(sql);
+			ps.setString(1, content);
+			ps.setInt(2, rno);
+			ps.setInt(3, bno);
+			ps.executeUpdate();
+			return true;
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return false;	
+	}
+	
+	// 9-1. 대댓글 수정 메소드 [인수 : 수정할 댓글 번호]
+	public boolean rereplyupdate(int bno, int rno, int rindex, String content) {
+		try {
+			String sql = "update reply set rcontent = ? where rno = ? and rindex = ? and bno = ?";
+			ps = con.prepareStatement(sql);
+			ps.setString(1, content);
+			ps.setInt(2, rno);
+			ps.setInt(3, rindex);
+			ps.setInt(4, bno);
+			ps.executeUpdate();
+			return true;
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return false;	
+	}
+	
+	// 10. 댓글 삭제 메소드 [인수 : 삭제할 댓글 번호]
+	public boolean replydelete(int rno, int rindex) {
+		try {
+			String sql = "delete from reply where rno = ? and rindex = ?";
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, rno);
+			ps.setInt(2, rindex);
+		if(rindex==0) {
+			sql = "delete from reply where rno = ? or rindex = ? ";
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, rno);
+			ps.setInt(2, rno);
+		}
+			ps.executeUpdate();
+			return true;
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+
+	
+	// 12. 리플 갯수 세기 메소드
+	
+	public int replycount(int bno) {
+		try {
+			String sql = "select count(rcontent) from reply where bno = ?";
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, bno);
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				return rs.getInt(1);
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return 0 ;
+	}
 }
 
 
