@@ -64,10 +64,10 @@
 			if( board.getMno() == MemberDao.getmemberDao().getmno(mid) ){ 	// 아이디로 회원번호 가져와서 비교 
 		%>
 			<div class="col-md-2">
-				<a href="delete?bno=<%=board.getBno()%>"> <button class="form-control">삭제</button> </a> <!--작성자와 로그인된 id가 동일하면 보이는 버튼  -->
+				<a href="../board/boarddelete?bno=<%=board.getBno()%>"> <button class="form-control">삭제</button> </a> <!--작성자와 로그인된 id가 동일하면 보이는 버튼  -->
 			</div>	
 			<div class="col-md-2">
-				<a href="update.jsp?bno=<%=board.getBno()%>"> <button class="form-control">수정</button> </a> <!--작성자와 로그인된 id가 동일하면 보이는 버튼  -->
+				<a href="boardupdate.jsp?bno=<%=board.getBno()%>"> <button class="form-control">수정</button> </a> <!--작성자와 로그인된 id가 동일하면 보이는 버튼  -->
 			</div>
 		<%} %>
 			<div class="col-md-2">
@@ -101,8 +101,8 @@
 				<td width="80%" colspan="2">
 					<%=reply.getRcontent() %> <br> 
 				<% if( mid !=null && mid.equals( reply.getMid() ) ){ // 본인 작성한 댓글이면 %>
-					<button class="btn replybtn"> 수정 </button>
-					<button type="button" class="btn replybtn" onclick="replydelete(<%=reply.getRno()%>)"> 삭제 </button>
+					<button type="button" class="btn replybtn" onclick="reply(<%=reply.getRno()%>,0)"> 수정 </button>
+  					<button type="button" class="btn replybtn" onclick="replydelete(<%=reply.getRno()%>,0)">삭제</button>
 				<%} %>
 					<button class="btn replybtn" 
 						onclick="rereplyview(<%=reply.getRno()%> , <%=reply.getBno()%> , '<%=mid%>' )"> 
@@ -129,8 +129,8 @@
 					<td width="80%">
 						<%=rereply.getRcontent() %> <br> 
 					<% if( mid != null && mid.equals( rereply.getMid() ) ){ %>
-						<button class="btn replybtn" onclick="replyupdate(<%=rereply.getRno()%>)"> 수정 </button>
-						<button class="btn replybtn" onclick="replydelete(<%=rereply.getRno()%>)"> 삭제 </button>
+						<button class="btn replybtn" onclick="rereplyupdate(<%=rereply.getRno()%>)"> 수정 </button>
+						<button class="btn replybtn" onclick="rereplydelete(<%=rereply.getRno()%>)"> 삭제 </button>
 					<%} %>
 					</td>
 				</tr>

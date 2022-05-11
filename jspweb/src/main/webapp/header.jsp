@@ -49,7 +49,7 @@
 					<li><a href="/jspweb/logout">로그아웃</a>
 					<li><a href="/jspweb/member/myshopping.jsp">나의쇼핑</a>
 					<li><a href="/jspweb/member/info.jsp">내정보</a></li>
-					<li><a href="/jspweb/board/boardlist.jsp">자유게시판</a></li>
+					<li><a href="/jspweb/board/boardlist.jsp?key=&keyword=">자유게시판</a></li>
 					</ul>
 					</div>					
 					<%} %>
@@ -69,17 +69,17 @@
 				<div class="collapse navbar-collapse" id="navcl" >
 					<ul class="navbar-nav col-md-12 justify-content-between">
 											<!-- justify-content-between : 자동 간격 배치  -->
-						<li class="nav-item"> <a href="/jspweb/main.jsp" class="nav-link">베스트 상품</a> </li>
-						<li class="nav-item"> <a href="#" class="nav-link">현대</a> </li>
-						<li class="nav-item"> <a href="#" class="nav-link">기아</a> </li>
-						<li class="nav-item"> <a href="#" class="nav-link">르노</a> </li>
-						<li class="nav-item"> <a href="#" class="nav-link">대우</a> </li>
-						<li class="nav-item"> <a href="#" class="nav-link">BMW</a> </li>
-						<li class="nav-item"> <a href="#" class="nav-link">아우디</a> </li>
-						<li class="nav-item"> <a href="#" class="nav-link">벤츠</a> </li>
-						<li class="nav-item"> <a href="#" class="nav-link">혼다</a> </li>
-						<li class="nav-item"> <a href="#" class="nav-link">그외</a> </li>
-						<li class="nav-item"> <a href="/jspweb/board/boardlist.jsp" class="nav-link">커뮤니티</a> </li>	
+						<li class="nav-item"> <a href="/jspweb/boardcar/베스트.jsp" class="nav-link">베스트 상품</a> </li>
+						<li class="nav-item"> <a href="/jspweb/boardcar/현대.jsp" class="nav-link">현대</a> </li>
+						<li class="nav-item"> <a href="/jspweb/boardcar/기아.jsp" class="nav-link">기아</a> </li>
+						<li class="nav-item"> <a href="/jspweb/boardcar/일본차.jsp" class="nav-link">일본차</a> </li>
+						<li class="nav-item"> <a href="/jspweb/boardcar/르노.jsp" class="nav-link">르노</a> </li>
+						<li class="nav-item"> <a href="/jspweb/boardcar/대우.jsp" class="nav-link">대우</a> </li>
+						<li class="nav-item"> <a href="/jspweb/boardcar/BMW.jsp" class="nav-link">BMW</a> </li>
+						<li class="nav-item"> <a href="/jspweb/boardcar/아우디.jsp" class="nav-link">아우디</a> </li>
+						<li class="nav-item"> <a href="/jspweb/boardcar/벤츠.jsp" class="nav-link">벤츠</a> </li>
+						<li class="nav-item"> <a href="/jspweb/boardcar/그외.jsp" class="nav-link">그외</a> </li>
+						<li class="nav-item"> <a href="/jspweb/board/boardlist.jsp?key=&keyword=" class="nav-link">커뮤니티</a> </li>	
 						<li class="nav-item"> <a href="/jspweb/board1/boardlist1.jsp" class="nav-link">고객센터</a> </li>	
 						<li class="nav-item"> <a href="#" class="nav-link"> <i class="fas fa-search"></i> </a> </li>	
 					</ul>

@@ -1,5 +1,6 @@
 *{padding: 0px;margin: 0px;}
 
+
 a{ text-decoration: none; color: black;}
 a:hover { color:blue; }
 
@@ -10,7 +11,8 @@ a:hover { color:blue; }
     font-style: normal;
 }
 
-*{ font-family: 'SBAggroB'; }
+*{ font-family: 'SBAggroB';
+border: solid 1px red; }
 
 .nav-item{font-size :20px;}
 .header_logo{
@@ -42,3 +44,50 @@ a:hover { color:blue; }
 .form-control{
 	background-color: white !important;
 }
+.shoppingbox{
+	font-size: 10px;
+	background-color: skyblue;
+	color: white;
+	padding: 2px 5px 2px 5px;
+	border-radius: 10px;
+	margin-right: 10px;
+}
+
+/* 드랍다운에 마우스 올렸을때 */
+.dropdown:hover .dropdown-menu{
+	display: block;
+}
+
+.boardlist_title{
+	width:20%;
+	border-bottom: 1px solid black;
+	padding:20px;
+	margin:100px 0px 50px 0px;
+	
+}
+
+.boardlist_topbtn{
+	margin:20px 0px;
+}
+
+.pagenum{
+	color: black;
+	font-size: 12px;
+}
+
+	#main_img{
+			width: 100%;	/* 반응형*/
+			height: 250px;
+			}
+		
+		
+	.BMW{	background-image: url("/jspweb/img/BMW.png"); 	/* 배경 이미지 */
+			background-position:top center;  			/*배경 이미지 위치*/
+			background-repeat: no-repeat;				/* 배경 이미지 자동채우기 제거 */
+			margin: 20px 0px;
+		}
+
+
+
+
+
