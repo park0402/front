@@ -52,10 +52,10 @@
 						<img class="card-img-top" alt="" src="img/차량.gif"> <!-- 이미지 -->
 						<div class="card-body">
 							<p class="item">
-								<span class="title"></span>
+								<span class="title">현대 제네시스</span>
 								<br>
 								<span class="content">
-								
+								2014년식 주행키로 21000km
 								</span>
 								<br>
 								<span class="price1"> 34,000,000원 </span>  
